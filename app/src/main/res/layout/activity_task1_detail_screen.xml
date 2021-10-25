@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Task1DetailActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="73dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Some Title"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:layout_editor_absoluteX="83dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="50dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="26dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        tools:layout_editor_absoluteY="73dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:lines="4"
+        android:maxLines="4"
+        android:text="TextkldsfklsdjfssdjlfkdsfkView"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        tools:layout_editor_absoluteY="128dp" />
+
+    <TextView
+        android:id="@+id/natText"
+        android:layout_width="70dp"
+        android:layout_height="46dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/fibText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="398dp" />
+
+    <TextView
+        android:id="@+id/fibText"
+        android:layout_width="70dp"
+        android:layout_height="46dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/colText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/natText"
+        tools:layout_editor_absoluteY="398dp" />
+
+    <TextView
+        android:id="@+id/colText"
+        android:layout_width="70dp"
+        android:layout_height="46dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fibText"
+        tools:layout_editor_absoluteY="398dp" />
+
+    <Button
+        android:id="@+id/nat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onNatButtonClick"
+        android:text="Nat"
+        app:layout_constraintEnd_toStartOf="@+id/fib"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="463dp" />
+
+    <Button
+        android:id="@+id/fib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onFibButtonClick"
+        android:text="Fib"
+        app:layout_constraintEnd_toStartOf="@+id/fib2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/nat"
+        tools:layout_editor_absoluteY="463dp" />
+
+    <Button
+        android:id="@+id/fib2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onColButtonClick"
+        android:text="Col"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fib"
+        tools:layout_editor_absoluteY="463dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
