@@ -8,102 +8,122 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="73dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_width="83dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_editor_absoluteX="50dp"
+        app:srcCompat="@android:drawable/sym_def_app_icon" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
         android:layout_marginTop="12dp"
-        android:text="Some Title"
+        android:text="@string/profile_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:layout_editor_absoluteX="83dp" />
+        app:layout_constraintVertical_bias="0.032" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="50dp"
         android:layout_height="44dp"
-        android:layout_marginStart="26dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="72dp"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        tools:layout_editor_absoluteY="73dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/sym_def_app_icon" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
         android:lines="4"
         android:maxLines="4"
-        android:text="TextkldsfklsdjfssdjlfkdsfkView"
+        android:text="@string/profile_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        tools:layout_editor_absoluteY="128dp" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <TextView
         android:id="@+id/natText"
         android:layout_width="70dp"
         android:layout_height="46dp"
-        android:text="TextView"
+        android:layout_marginTop="376dp"
+        android:textAlignment="center"
+        android:text="@string/zero"
         app:layout_constraintEnd_toStartOf="@+id/fibText"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.544"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="398dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/fibText"
         android:layout_width="70dp"
         android:layout_height="46dp"
-        android:text="TextView"
+        android:layout_marginTop="376dp"
+        android:layout_marginEnd="48dp"
+        android:textAlignment="center"
+        android:text="@string/zero"
         app:layout_constraintEnd_toStartOf="@+id/colText"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/natText"
-        tools:layout_editor_absoluteY="398dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/colText"
         android:layout_width="70dp"
         android:layout_height="46dp"
-        android:text="TextView"
+        android:layout_marginTop="376dp"
+        android:layout_marginEnd="52dp"
+        android:textAlignment="center"
+        android:text="@string/zero"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/fibText"
-        tools:layout_editor_absoluteY="398dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/nat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onNatButtonClick"
-        android:text="Nat"
+        android:text="@string/natural"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/fib"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="463dp" />
+        app:layout_constraintTop_toBottomOf="@+id/natText"
+        app:layout_constraintVertical_bias="0.163" />
 
     <Button
         android:id="@+id/fib"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onFibButtonClick"
-        android:text="Fib"
-        app:layout_constraintEnd_toStartOf="@+id/fib2"
+        android:text="@string/fibonacci"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/col"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/nat"
-        tools:layout_editor_absoluteY="463dp" />
+        app:layout_constraintTop_toBottomOf="@+id/fibText"
+        app:layout_constraintVertical_bias="0.163" />
 
     <Button
-        android:id="@+id/fib2"
+        android:id="@+id/col"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onColButtonClick"
-        android:text="Col"
+        android:text="@string/collatz"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/fib"
-        tools:layout_editor_absoluteY="463dp" />
+        app:layout_constraintTop_toBottomOf="@+id/colText"
+        app:layout_constraintVertical_bias="0.163" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

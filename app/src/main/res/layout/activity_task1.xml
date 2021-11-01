@@ -12,58 +12,64 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="50dp"
-            android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/image_avatar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                tools:ignore="ImageContrastCheck"
-                tools:srcCompat="@tools:sample/avatars" />
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="20dp"
+            app:srcCompat="@android:drawable/sym_def_app_icon" />
 
             <ListView
-                android:id="@+id/task_list"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+            android:id="@+id/task_list"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true" />
 
-        </LinearLayout>
+    </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             android:text="@string/itmo" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="Name" />
+            android:layout_marginTop="40dp"
+            android:text="@string/edit_text_default" />
 
         <androidx.appcompat.widget.SwitchCompat
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="50dp"
-            android:text="Switch" />
+            android:text="@string/switch_text" />
 
         <Button
+            android:id="@+id/hideListButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="Hide list" />
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:onClick="onHideListButtonClick"
+            android:text="@string/hide_list" />
 
         <Button
+            android:id="@+id/toAstButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
-            android:text="To AST" />
+            android:onClick="onToAstButtonClick"
+            android:text="@string/to_ast" />
 
     </LinearLayout>
 

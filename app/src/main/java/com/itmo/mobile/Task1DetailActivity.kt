@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.itmo.mobile.model.Task1DetailScreenState
 
 class Task1DetailActivity : AppCompatActivity() {
 
@@ -19,18 +20,13 @@ class Task1DetailActivity : AppCompatActivity() {
         natText = findViewById(R.id.natText)
         fibText = findViewById(R.id.fibText)
         colText = findViewById(R.id.colText)
-        screenState = Task1DetailScreenState(
+        screenState = savedInstanceState?.getParcelable(screenStateKey) ?: Task1DetailScreenState(
             description = "ddd",
             icon = "sd"
         )
-    }
-
-    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        super.onRestoreInstanceState(savedInstanceState)
-        screenState = savedInstanceState.getParcelable(screenStateKey) ?: Task1DetailScreenState(
-            description = "ddd",
-            icon = "sd"
-        )
+        natText.text = screenState.natural.toString()
+        fibText.text = screenState.fibonacci.toString()
+        colText.text = screenState.collatz.toString()
     }
 
     override fun onSaveInstanceState(outState: Bundle) {

@@ -1,4 +1,4 @@
-package com.itmo.mobile
+package com.itmo.mobile.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
@@ -14,8 +14,8 @@ data class Task1DetailScreenState(
 ) : Parcelable {
     fun incrementFibonacci() {
         val fPrevious = fibonacciPrevious
-        fibonacci += fibonacciPrevious
-        fibonacciPrevious = fPrevious
+        fibonacciPrevious = fibonacci
+        fibonacci += fPrevious
     }
 
     fun incrementCollatz() {
