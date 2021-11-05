@@ -7,11 +7,11 @@
             android:icon="@drawable/task"
             android:title="@string/task1" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/task2"
             android:icon="@drawable/task"
             android:title="@string/task2" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/task3"
             android:icon="@drawable/task"
             android:title="@string/task3" />
     </group>

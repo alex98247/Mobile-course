@@ -14,8 +14,4 @@
     <string name="natural">Nat</string>
     <string name="profile_description">TextkldsfklsdjfssdjlfkdsfkView</string>
     <string name="profile_title">Some Title</string>
-    <!-- Common -->
-    <string name="zero" translatable="false">0</string>
-    <string name="plus" translatable="false">+</string>
-    <string name="minus" translatable="false">-</string>
 </resources>

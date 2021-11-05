@@ -10,7 +10,8 @@ data class Task1DetailScreenState(
     private var fibonacciPrevious: Int = 1,
     var collatz: Int = 300,
     val description: String,
-    val icon: Icon = Icon.values().toList().shuffled().first()
+    val icon: Icon,
+    val title: String
 ) : Parcelable {
     fun incrementFibonacci() {
         val fPrevious = fibonacciPrevious

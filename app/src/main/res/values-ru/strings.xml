@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Мобильная разработка</string>
+    <string name="task1">Задание 1</string>
+    <string name="task2">Задание 2</string>
+    <string name="task3">Задание 3</string>
+    <string name="itmo">Университет ИТМО</string>
+    <string name="switch_text">Переключатель</string>
+    <string name="hide_list">Скрыть список</string>
+    <string name="toast">Всплывашка</string>
+    <string name="edit_text_default">Имя</string>
+    <!-- Activity task1 detail screen -->
+    <string name="collatz">Кол</string>
+    <string name="fibonacci">Фиб</string>
+    <string name="natural">Нат</string>
+    <string name="profile_description">ывпоылвполдвыопдывоплд</string>
+    <string name="profile_title">Заголовок</string>
+</resources>

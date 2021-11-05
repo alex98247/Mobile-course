@@ -6,8 +6,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.ActionBar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.appcompat.widget.Toolbar
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
+import com.google.android.material.navigation.NavigationView
+import android.view.Menu
+import android.view.MenuItem
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,19 +29,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        preferences = getPreferences(androidx.appcompat.app.AppCompatActivity.MODE_PRIVATE)
+        preferences = getPreferences(MODE_PRIVATE)
         drawerLayout = findViewById(R.id.drawer_layout)
         scoreTextView = findViewById(R.id.score)
         score = preferences.getInt(scoreKey, 0)
         scoreTextView.text = score.toString()
-    }
-
-    fun clickMenu(view: View) {
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout.closeDrawer(GravityCompat.START)
-        } else {
-            drawerLayout.openDrawer(GravityCompat.START)
-        }
+        configureNavigationDrawer()
+        configureToolbar()
     }
 
     fun onTask1Click(view: View) {
@@ -58,5 +61,39 @@ class MainActivity : AppCompatActivity() {
         editor.apply()
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                drawerLayout.openDrawer(GravityCompat.START)
+                return true
+            }
+        }
+        return true
+    }
+
+    private fun configureNavigationDrawer() {
+        drawerLayout = findViewById<View>(R.id.drawer_layout) as DrawerLayout
+        val navView = findViewById<View>(R.id.navigation) as NavigationView
+        navView.setNavigationItemSelectedListener(NavigationView.OnNavigationItemSelectedListener { menuItem ->
+            val itemId = menuItem.itemId
+
+            if(itemId == R.id.task1){
+                val intent = Intent(this, Task1Activity::class.java)
+                startActivity(intent)
+            }
+            drawerLayout.closeDrawer(GravityCompat.START)
+
+
+            return@OnNavigationItemSelectedListener true
+        })
+    }
+
+    private fun configureToolbar() {
+        val toolbar: Toolbar = findViewById<View>(R.id.toolbar) as Toolbar
+        setSupportActionBar(toolbar)
+        val actionbar: ActionBar? = supportActionBar
+        actionbar?.setHomeAsUpIndicator(R.drawable.ic_menu)
+        actionbar?.setDisplayHomeAsUpEnabled(true)
+    }
 
 }

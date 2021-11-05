@@ -19,11 +19,11 @@
         app:srcCompat="@android:drawable/sym_def_app_icon" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/profile_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:text="@string/profile_title"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -40,7 +40,7 @@
         app:srcCompat="@android:drawable/sym_def_app_icon" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/profile_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -61,77 +61,74 @@
         android:layout_marginEnd="160dp"
         android:text="@string/zero"
         android:textAlignment="center"
+        android:textSize="@dimen/counter_size"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/fibText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textSize="@dimen/counter_size"
-        app:layout_constraintVertical_bias="0.488" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/fibText"
         android:layout_width="70dp"
         android:layout_height="46dp"
         android:layout_marginEnd="160dp"
-        android:layout_marginBottom="64dp"
         android:text="@string/zero"
-        android:textStyle="bold"
         android:textAlignment="center"
         android:textSize="@dimen/counter_size"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/colText"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/natText" />
 
     <TextView
         android:id="@+id/colText"
         android:layout_width="70dp"
         android:layout_height="46dp"
         android:layout_marginEnd="160dp"
-        android:layout_marginBottom="68dp"
         android:text="@string/zero"
-        android:textStyle="bold"
-        android:textSize="@dimen/counter_size"
         android:textAlignment="center"
+        android:textSize="@dimen/counter_size"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fibText" />
 
     <Button
         android:id="@+id/nat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
         android:onClick="onNatButtonClick"
         android:text="@string/natural"
         app:layout_constraintBottom_toTopOf="@+id/fib"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/natText"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.488" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/fib"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="60dp"
         android:onClick="onFibButtonClick"
         android:text="@string/fibonacci"
         app:layout_constraintBottom_toTopOf="@+id/col"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.035"
-        app:layout_constraintStart_toEndOf="@+id/fibText" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fibText"
+        app:layout_constraintTop_toBottomOf="@+id/nat"
+        app:layout_constraintVertical_bias="0.488" />
 
     <Button
         android:id="@+id/col"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="68dp"
         android:onClick="onColButtonClick"
         android:text="@string/collatz"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/colText" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/colText"
+        app:layout_constraintTop_toBottomOf="@+id/fib"
+        app:layout_constraintVertical_bias="0.488" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
