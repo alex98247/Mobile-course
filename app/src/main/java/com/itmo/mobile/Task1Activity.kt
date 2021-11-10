@@ -7,8 +7,10 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SwitchCompat
+import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.content.ContextCompat
 import androidx.core.widget.doOnTextChanged
+import com.google.android.material.snackbar.Snackbar
 import com.itmo.mobile.data.AppConstants
 import com.itmo.mobile.data.DataSource
 import com.itmo.mobile.data.DataSourceImpl
@@ -25,6 +27,7 @@ class Task1Activity : AppCompatActivity() {
     private lateinit var switchColor: SwitchCompat
     private val dataSource: DataSource = DataSourceImpl()
     private lateinit var screenState: Task1ScreenState
+    private lateinit var mCoordinatorLayout: CoordinatorLayout
     private lateinit var peopleList: Map<Long, Person>
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,6 +37,7 @@ class Task1Activity : AppCompatActivity() {
         switchColor = findViewById(R.id.switchColor)
         universityNameLabel = findViewById(R.id.universityNameLabel)
         universityNameSetText = findViewById(R.id.universityNameSetText)
+        mCoordinatorLayout = findViewById(R.id.mCoordinatorLayout)
         peopleList = dataSource.fetchData().map { it.id to it }.toMap()
         screenState = savedInstanceState?.getParcelable(screenStateKey) ?: Task1ScreenState(
             textLabelText = this.getString(R.string.itmo)
@@ -99,5 +103,7 @@ class Task1Activity : AppCompatActivity() {
     fun onFabButtonClick(view: View) {
         universityNameLabel.text = universityNameSetText.text
         screenState.textLabelText = universityNameLabel.text.toString()
+        Snackbar.make(mCoordinatorLayout, "Text changed", Snackbar.LENGTH_LONG).show()
+
     }
 }
