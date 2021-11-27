@@ -81,6 +81,10 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this, Task1Activity::class.java)
                 startActivity(intent)
             }
+            if(itemId == R.id.task3){
+                val intent = Intent(this, Task3Activity::class.java)
+                startActivity(intent)
+            }
             drawerLayout.closeDrawer(GravityCompat.START)
 
 

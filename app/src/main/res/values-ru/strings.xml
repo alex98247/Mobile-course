@@ -8,6 +8,7 @@
     <string name="hide_list">Скрыть список</string>
     <string name="toast">Всплывашка</string>
     <string name="edit_text_default">Имя</string>
+    <string name="book_download">Загрузить</string>
     <!-- Activity task1 detail screen -->
     <string name="collatz">Кол</string>
     <string name="fibonacci">Фиб</string>
