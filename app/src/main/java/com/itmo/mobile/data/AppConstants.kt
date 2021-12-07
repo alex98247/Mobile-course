@@ -1,7 +1,5 @@
 package com.itmo.mobile.data
 
-class AppConstants {
-    companion object {
-        const val personExtraKey = "personKey"
-    }
+object AppConstants {
+    const val personExtraKey = "personKey"
 }

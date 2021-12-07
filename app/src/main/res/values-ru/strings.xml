@@ -15,4 +15,9 @@
     <string name="natural">Нат</string>
     <string name="profile_description">ывпоылвполдвыопдывоплд</string>
     <string name="profile_title">Заголовок</string>
+    <!-- Activity task2 detail screen -->
+    <string name="run">Начать</string>
+    <string name="stop">Остановить</string>
+    <string name="continue_str">Возобновить</string>
+    <string name="reset">Сбросить</string>
 </resources>

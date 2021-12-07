@@ -15,6 +15,11 @@
     <string name="natural">Nat</string>
     <string name="profile_description">TextkldsfklsdjfssdjlfkdsfkView</string>
     <string name="profile_title">Some Title</string>
+    <!-- Activity task2 detail screen -->
+    <string name="run">Run</string>
+    <string name="stop">Stop</string>
+    <string name="continue_str">Continue</string>
+    <string name="reset">Reset</string>
     <!-- Common -->
     <string name="zero" translatable="false">0</string>
     <string name="plus" translatable="false">+</string>
